@@ -14,7 +14,7 @@ A script to monitor when .ssh/authorized_keys was changed with [Zabbix](https://
 
 ## Licence
 
-GPLv2 (see [debian/copyright](debian/copyright))
+GPLv2 or later (see [debian/copyright](debian/copyright))
 
 ## Template for the Zabbix frontend
 
