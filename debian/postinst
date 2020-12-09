@@ -21,7 +21,7 @@ case "$1" in
 
     configure)
         chmod +x /usr/sbin/zabbix-check-sshkey.sh
-        if [ "$(cat /etc/sudoers | grep zabbix-check-sshkey | wc -l)" = "0" ]; then
+        if [ "$(grep zabbix-check-sshkey /etc/sudoers | wc -l)" -eq "0" ]; then
             echo 'zabbix ALL=NOPASSWD:/usr/sbin/zabbix-check-sshkey.sh' >> /etc/sudoers
         fi
 
