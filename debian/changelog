@@ -1,12 +1,18 @@
+zabbix-check-sshkey (0.2) focal; urgency=medium
+
+  * Update: compat
+
+ -- Christoph Hüffelmann <chr@istoph.de>  Wed, 09 Dec 2020 20:08:27 +0100
+
 zabbix-check-sshkey (0.1) precise; urgency=low
 
-  * Releas 
+  * Releas
 
  -- Christoph Hueffelmann <chr@istoph.de>  Wed, 20 May 2015 20:33:20 +0200
 
 zabbix-check-sshkey (0.1~dev2) precise; urgency=low
 
-  * Bugfix: fehlende sudoers regeln 
+  * Bugfix: missing sudoers rules.
 
  -- Christoph Hueffelmann <chr@istoph.de>  Wed, 20 May 2015 12:06:38 +0200
 
