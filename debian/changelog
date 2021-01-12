@@ -1,12 +1,21 @@
-zabbix-check-sshkey (0.2) focal; urgency=medium
+zabbix-check-sshkey (0.3) focal; urgency=low
+
+  * Added discovery script
+  * Updated get script
+  * Create sudoers.d file instead of editing sudoers in postinst
+  * Changed file paths to match paths in the other zabbix-check packages
+
+ -- Sebastian Huebner <sebastian@hueb-ner.de>  Tue, 12 Jan 2021 20:42:57 +0100
+
+zabbix-check-sshkey (0.2) focal; urgency=low
 
   * Update: compat
 
- -- Christoph Hüffelmann <chr@istoph.de>  Wed, 09 Dec 2020 20:08:27 +0100
+ -- Christoph Hueffelmann <chr@istoph.de>  Wed, 09 Dec 2020 20:08:27 +0100
 
 zabbix-check-sshkey (0.1) precise; urgency=low
 
-  * Releas
+  * Release
 
  -- Christoph Hueffelmann <chr@istoph.de>  Wed, 20 May 2015 20:33:20 +0200
 
