@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+set -e
+
+return_val="{\"data\":["
+
+# reading home paths of users from /etc/passwd and checks
+# if there is an authorized_keys file
+while read -r line; do
+    auth_keyfile_path="$(echo "${line}" | cut -d":" -f6)/.ssh/authorized_keys"
+
+    if [ -f ${auth_keyfile_path} ]; then
+        return_val="${return_val}{\"#SSHAPATH\"}:\"${auth_keyfile_path}\"},"
+    fi
+done < /etc/passwd
+
+echo "${return_val%,}]}"

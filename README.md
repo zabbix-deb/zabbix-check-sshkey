@@ -2,7 +2,7 @@
 
 ## Description
 
-A script to monitor when .ssh/authorized_keys was changed with [Zabbix](https://zabbix.com).
+A script to monitor changes to .ssh/authorized_keys with [Zabbix](https://zabbix.com).
 
 ## Usage
 
@@ -18,5 +18,4 @@ GPLv2 or later (see [debian/copyright](debian/copyright))
 
 ## Template for the Zabbix frontend
 
-A template for the Zabbix frontend can be found, as usual in our packages, in [/usr/share/doc/${package_name}/](usr/share/doc/zabbix-check-sshkey/)
-
+A template for the Zabbix frontend can be found, as usual in our packages, in [/usr/share/doc/${package_name}/](examples/)

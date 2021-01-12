@@ -1,24 +1,20 @@
-This package is actually maintained by Christoph Hüffelmann <chr@istoph.de> 2014
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
-The main software is from:
-http://www.zabbix.com/
-
-Copyright:
-
-  Copyright (C) 2014 
-  Author: Christoph Hüffelmann <chr@istoph.de>
-
-License:
-
+Files: *
+Copyright: 2014 Christoph Hueffelmann <chr@istoph.de>
+           2021 Sebastian Huebner <sebastian@hueb-ner.de>
+License: GPL-2+
+  Copyright (c) 2021 Christoph Hueffelmann, Sebastian Huebner
+  .
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
   as published by the Free Software Foundation; either version 2
   of the License, or (at your option) any later version.
-
+  .
   This program is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details. 
+  .
   On Debian GNU/Linux systems, the complete text of the GNU General
   Public License can be found in `/usr/share/common-licenses/GPL-2'.
