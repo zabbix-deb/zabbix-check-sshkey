@@ -11,4 +11,4 @@ fail() {
 
 [ -r "${authorized_keyfile}" ] || fail
 
-md5sum "${authorized_keyfile}" | cut -d" " -f1
+sha512sum "${authorized_keyfile}" | cut -d" " -f1
