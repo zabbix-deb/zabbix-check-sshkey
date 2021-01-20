@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-01-20T10:19:26Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App SSH authorized_keys</template>
+            <name>Template App SSH authorized_keys</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>authorized_keys discovery</name>
+                    <key>sshkey.discovery</key>
+                    <delay>5h</delay>
+                    <lifetime>2d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Checksum of {#SSHAPATH}</name>
+                            <key>sshkey[{#SSHAPATH}]</key>
+                            <delay>15m</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>SSH service</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{diff()}&gt;0</expression>
+                                    <name>{#SSHAPATH} has been changed on {HOST.NAME}</name>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>
