@@ -9,8 +9,8 @@ return_val="{\"data\":["
 while read -r line; do
     auth_keyfile_path="$(echo "${line}" | cut -d":" -f6)/.ssh/authorized_keys"
 
-    [ -f "${auth_keyfile_path}" ] && return_val="${return_val}{\"#SSHAPATH\"}:\"${auth_keyfile_path}\"},"
-    [ -f "${auth_keyfile_path}2" ] && return_val="${return_val}{\"#SSHAPATH\"}:\"${auth_keyfile_path}2\"},"
+    [ -f "${auth_keyfile_path}" ] && return_val="${return_val}{\"{#SSHAPATH}\":\"${auth_keyfile_path}\"},"
+    [ -f "${auth_keyfile_path}2" ] && return_val="${return_val}{\"{#SSHAPATH}\":\"${auth_keyfile_path}2\"},"
 done < /etc/passwd
 
 echo "${return_val%,}]}"
