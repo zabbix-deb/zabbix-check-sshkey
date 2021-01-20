@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+authorized_keyfile=${1}
+
+fail() {
+    echo "ZBX_NOTSUPPORTED"
+    exit 1
+}
+
+[ -r "${authorized_keyfile}" ] || fail
+
+sha512sum "${authorized_keyfile}" | cut -d" " -f1
